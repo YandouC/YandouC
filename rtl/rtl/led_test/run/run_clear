@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "A = $1\n"
+a=$1
+echo "A = $a\n"
+
+if [ $a == "all" ];then
+rm -rf *.*
+echo "    remove *.*"
+fi
+
+if [ $a == "bak" ];then
+rm -rf *.bak
+echo "    remove *.bak"
+fi
+
+if [ $a == "info" ];then
+rm -rf *.info*
+echo "    remove *.info*"
+fi
+

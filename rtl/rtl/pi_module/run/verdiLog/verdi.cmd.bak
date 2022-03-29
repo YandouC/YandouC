@@ -1,0 +1,329 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+debLoadSimResult /home/rfic/project/work/pi_module/run/test.fsdb
+wvCreateWindow
+srcHBSelect "tb_pi.u_pi" -win $_nTrace1
+srcHBSelect "tb_pi" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_pi" -delim "."
+srcHBSelect "tb_pi" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "uk_max" -line 47 -pos 2 -win $_nTrace1
+srcSelect -signal "uk_min" -line 46 -pos 2 -win $_nTrace1
+srcSelect -signal "ki" -line 45 -pos 2 -win $_nTrace1
+srcSelect -signal "ek_ex" -line 44 -pos 2 -win $_nTrace1
+srcSelect -signal "ek" -line 43 -pos 2 -win $_nTrace1
+srcSelect -signal "kp" -line 42 -pos 2 -win $_nTrace1
+srcSelect -signal "uk_ex" -line 41 -pos 2 -win $_nTrace1
+srcSelect -signal "pista" -line 40 -pos 2 -win $_nTrace1
+srcSelect -signal "rst_n" -line 39 -pos 2 -win $_nTrace1
+srcSelect -signal "clk" -line 38 -pos 2 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "u_pi" -line 37 -pos 1 -win $_nTrace1
+srcAction -pos 36 2 0 -win $_nTrace1 -name "u_pi" -ctrlKey off
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {10 22 1 1 1 1} -backward
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvUnknownSaveResult -win $_nWave2 -clear
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "pi_state" -line 71 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+schCreateWindow -hierFSM -win $_nSchema1 -mode all
+schCloseWindow -win $_nSchema3
+wvZoom -win $_nWave2 325.354864 1088.014654
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 950.324974 -snap {("G1" 11)}
+srcDeselectAll -win $_nTrace1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvZoom -win $_nWave2 99.832118 487.641502
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_b" -line 80 -pos 1 -win $_nTrace1
+srcSelect -signal "count_a" -line 79 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvZoom -win $_nWave2 487.647577 1213.779736
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 644.618248 -snap {("G2" 1)}
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcHBSelect "tb_pi" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_pi" -delim "."
+srcHBSelect "tb_pi" -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace4 -file /home/rfic/project/work/pi_module/rtl/tb_pi.v
+srcCloseWindow -win $_nTrace4
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "kp" -line 15 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+debReload
+wvGoToGroup -win $_nWave2 "G2"
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+wvZoom -win $_nWave2 509.983316 1063.836164
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+srcHBSelect "tb_pi.u_pi" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_pi.u_pi" -delim "."
+srcHBSelect "tb_pi.u_pi" -win $_nTrace1
+srcHBSelect "tb_pi.u_pi.u_mul_32bits" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_res" -line 103 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvSetCursor -win $_nWave2 703.605252 -snap {("G3" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "u_mul_32bits" -line 98 -pos 1 -win $_nTrace1
+srcAction -pos 97 2 8 -win $_nTrace1 -name "u_mul_32bits" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs" -line 8 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs" -line 8 -pos 1 -win $_nTrace1
+srcAction -pos 7 8 9 -win $_nTrace1 -name "count_a_abs" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sign_a" -line 20 -pos 1 -win $_nTrace1
+srcSelect -signal "sign_b" -line 21 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 2)}
+wvSetPosition -win $_nWave2 {("G4" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_b_abs" -line 21 -pos 1 -win $_nTrace1
+srcSelect -signal "count_a_abs" -line 20 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G5" 2)}
+wvSetCursor -win $_nWave2 647.139449 -snap {("G5" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_t" -line 20 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_t" -line 20 -pos 1 -win $_nTrace1
+srcAction -pos 19 11 6 -win $_nTrace1 -name "count_a_t" -ctrlKey off
+srcSelect -signal "count_b_t" -line 17 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_t" -line 16 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_t" -line 16 -pos 1 -win $_nTrace1
+srcAction -pos 15 2 7 -win $_nTrace1 -name "count_a_t" -ctrlKey off
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/pi_module/rtl/32bits_mul.v
+srcCloseWindow -win $_nTrace5
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sign_a" -line 22 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sign_b" -line 23 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_t" -line 22 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_b_t" -line 23 -pos 1 -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace6 -file /home/rfic/project/work/pi_module/rtl/32bits_mul.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+verdiDockWidgetSetCurTab -dock windowDock_nEditor_6
+srcCloseWindow -win $_nTrace6
+srcDeselectAll -win $_nTrace1
+debReload
+wvSetCursor -win $_nWave2 721.032970 -snap {("G4" 0)}
+srcDeselectAll -win $_nTrace1
+debReload
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs" -line 22 -pos 1 -win $_nTrace1
+srcSelect -signal "count_b_abs" -line 23 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs" -line 22 -pos 1 -win $_nTrace1
+srcTraceLoad "tb_pi.u_pi.u_mul_32bits.count_a_abs\[30:0\]" -win $_nTrace1
+srcHBSelect "tb_pi.u_pi.u_mul_32bits" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_pi.u_pi.u_mul_32bits" -delim "."
+srcHBSelect "tb_pi.u_pi.u_mul_32bits" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs\[15:8\]" -line 42 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_a_abs\[7:0\]" -line 41 -pos 1 -win $_nTrace1
+srcSelect -signal "count_b_abs\[7:0\]" -line 41 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 2
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "count_b_abs\[15:8\]" -line 46 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G7" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G7" 3 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "result_t\[0\]" -line 41 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+srcTraceLoad "tb_pi.u_pi.u_mul_32bits.result_t\[0\]" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result_t" -line 26 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "result_t\[0\]" -line 26 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result_t" -line 26 -pos 1 -win $_nTrace1
+srcTraceLoad "tb_pi.u_pi.u_mul_32bits.mul_result_t\[63:0\]" -win $_nTrace1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace7 -file /home/rfic/project/work/pi_module/rtl/32bits_mul.v
+srcCloseWindow -win $_nTrace7
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+wvSelectSignal -win $_nWave2 {( "G7" 4 )} 
+wvExpandBus -win $_nWave2 {("G7" 4)}
+wvScrollUp -win $_nWave2 59
+wvSelectSignal -win $_nWave2 {( "G7" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G7" 4 )} 
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvCollapseBus -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvScrollDown -win $_nWave2 0
+wvSetPosition -win $_nWave2 {("G8" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result" -line 35 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result_t" -line 35 -pos 1 -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "G7" 4 )} 
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result_t" -line 35 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {35 37 2 1 8 1} -backward
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_result" -line 35 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1

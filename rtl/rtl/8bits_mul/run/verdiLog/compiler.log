@@ -1,0 +1,16 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -sv_pragma
+    -f rtl_list.f
+        ../rtl/tb_bits_mul.v
+        ../rtl/bits_mul.v
+
+
+*Warning* too many digits in hexadecimal
+"../rtl/bits_mul.v", 65: 
+Highest level modules:
+tb_bits_mul
+
+Total	0 error(s),   1 warning(s)

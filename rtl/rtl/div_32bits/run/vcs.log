@@ -1,0 +1,52 @@
+Command: vcs -sverilog -full64 -l vcs.log -notice -line -debug_acc+all -V +v2k +lint=TFIPC-L \
+-P /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -f \
+rtl_list.f
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/bin/vcs1 -Mcc=gcc -Mcplusplus=g++ \
+-Masflags= -Mcfl= -pipe -fPIC -O -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include \
+-Mxcflags= -pipe -fPIC -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include -Mldflags= \
+-rdynamic  -Mout=simv -Mamsrun="" -Mvcsaceobjs="" -Mobjects=" /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvirsim.so \
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/liberrorinf.so /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so \
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvfs.so /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a \
+" -Mexternalobj= -Msaverestoreobj=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o \
+-Mcrt0= -Mcrtn="" -Mcsrc="" -Msyslibs=-ldl -lm  -l vcs.log -full64 -Xnotice=1 -line \
+-debug_acc+all +vpi +vcsd1 +itf+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcsdp_lite.tab \
+-V +v2k +lint=TFIPC-L -P /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+-picarchive -sverilog -gen_obj -f rtl_list.f  
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Mon Feb 28 09:10:53 2022
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+################# <-file/-f contents> ########################
+-f rtl_list.f
+        ../rtl/divider.v
+        ../rtl/tb_divider.v
+
+################# <-file/-f ends> ########################
+
+Parsing design file '../rtl/divider.v'
+Parsing design file '../rtl/tb_divider.v'
+Top Level Modules:
+       divider
+       tb_mul_32bits
+TimeScale is 1 ns / 1 ns
+
+Error-[URMI] Unresolved modules
+../rtl/divider.v, 43
+"inverse inverse( .clk (clk),  .rst (rst),  .inv_start (inverse_start),  .inv_data (div_data2),  .inv_end (inverse_end),  .inv_dout (inverse_result));"
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../rtl/tb_divider.v, 27
+"mul_32bits u_mul_32bits( .clk (clk),  .rst_n (rst_n),  .count_a (a),  .count_b (b),  .result (result));"
+  Module definition of above instance is not found in the design.
+
+2 errors
+CPU time: .290 seconds to compile

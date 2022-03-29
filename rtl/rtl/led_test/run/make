@@ -1,0 +1,4 @@
+find ../rtl -name *.v >rtl_list.f
+export LD_LIBRARY_PATH=/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/linux64
+./run_vcs
+#./run_verdi

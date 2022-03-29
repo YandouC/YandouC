@@ -1,0 +1,114 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+wvCreateWindow
+wvOpenFile -win $_nWave2 {/home/rfic/project/work/i2c/run/test.fsdb}
+srcHBSelect "\$root" -win $_nTrace1
+srcSetScope -win $_nTrace1 "\$root" -delim "."
+srcHBSelect "\$root" -win $_nTrace1
+srcHBSelect "\$root.i2c_start" -win $_nTrace1
+srcSetScope -win $_nTrace1 "\$root.i2c_start" -delim "."
+srcHBSelect "\$root.i2c_start" -win $_nTrace1
+srcHBSelect "\$root.i2c_wr" -win $_nTrace1
+srcHBSelect "\$root.i2c_wr" -win $_nTrace1
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_i2c" -delim "."
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcHBSelect "i2c_slave" -win $_nTrace1
+srcSetScope -win $_nTrace1 "i2c_slave" -delim "."
+srcHBSelect "i2c_slave" -win $_nTrace1
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_i2c" -delim "."
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 0 8 3 -win $_nTrace1 -name "i2c_task" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcAction -pos 0 8 1 -win $_nTrace1 -name "i2c_task" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 0 6 1 -win $_nTrace1 -name "rtl" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetSetCurTab -dock widgetDock_<Message>
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+nsMsgSelect -range {0 1-1}
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcHBSelect "\$root" -win $_nTrace1
+srcSetScope -win $_nTrace1 "\$root" -delim "."
+srcHBSelect "\$root" -win $_nTrace1
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_i2c" -delim "."
+srcHBSelect "tb_i2c" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcAction -pos 0 8 3 -win $_nTrace1 -name "i2c_task" -ctrlKey off
+nsMsgSelect -range {0 1-1}
+nsMsgAction -tab cmpl -index {0 1}
+nsMsgSelect -range {0 1-1}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+nsMsgSelect -range {0 1-1}
+nsMsgAction -tab cmpl -index {0 1}
+nsMsgSelect -range {0 1-1}
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+nsMsgSelect -range {0 2-2}
+nsMsgAction -tab cmpl -index {0 2}
+nsMsgSelect -range {0 2-2}
+nsMsgSelect -range {0 1-1}
+nsMsgAction -tab cmpl -index {0 1}
+nsMsgSelect -range {0 1-1}
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 1-1}
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload

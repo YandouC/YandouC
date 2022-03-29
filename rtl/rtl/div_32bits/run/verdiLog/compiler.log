@@ -1,0 +1,20 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -sv_pragma
+    -f rtl_list.f
+        ../rtl/divider.v
+        ../rtl/tb_divider.v
+
+Highest level modules:
+divider
+tb_mul_32bits
+
+
+*Error* view inverse is not defined for instance inverse
+"../rtl/divider.v", 43: 
+
+*Error* view mul_32bits is not defined for instance u_mul_32bits
+"../rtl/tb_divider.v", 27: 
+Total	2 error(s),   0 warning(s)

@@ -1,0 +1,9 @@
+#/bin/csh -f
+vcs -sverilog -full64 -l vcs.log -notice \
+    -line -debug_acc+all -V +v2k \
+    +lint=TFIPC-L \
+    -P /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+       /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a \
+    -f rtl_list.f \
+
+./simv

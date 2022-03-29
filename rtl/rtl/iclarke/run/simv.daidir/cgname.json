@@ -1,0 +1,32 @@
+{
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        1
+    ],
+    "bits_mul": [
+        "bits_mul",
+        "BzZS6",
+        "module",
+        5
+    ],
+    "mul_32bits": [
+        "mul_32bits",
+        "MvYE2",
+        "module",
+        6
+    ],
+    "tb_iclarke": [
+        "tb_iclarke",
+        "QbFbt",
+        "module",
+        4
+    ]
+}

@@ -1,0 +1,67 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+debLoadSimResult /home/rfic/project/work/lpf_module/run/test.fsdb
+wvCreateWindow
+verdiDockWidgetSetCurTab -dock widgetDock_<Message>
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace3 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+srcCloseWindow -win $_nTrace3
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+srcHBSelect "tb_lpf.u_lpf" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_lpf.u_lpf" -delim "."
+srcHBSelect "tb_lpf.u_lpf" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {10 19 3 1 16 1} -backward
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvUnknownSaveResult -win $_nWave2 -clear
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 761.129004 -snap {("G1" 7)}
+wvSelectGroup -win $_nWave2 {G2}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "lpf_state" -line 37 -pos 1 -win $_nTrace1
+srcSelect -signal "lpf_next_state" -line 39 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+schCreateWindow -hierFSM -win $_nSchema1 -mode all
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetSetCurTab -dock windowDock_nEditor_5
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+verdiDockWidgetSetCurTab -dock widgetDock_<Message>
+nsMsgSelect -range {0 0-0}
+nsMsgAction -tab cmpl -index {0 0}
+nsMsgSelect -range {0 0-0}
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/lpf_module/rtl/lpf.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_4
+schCloseWindow -win $_nSchema4
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+srcCloseWindow -win $_nTrace5
+srcDeselectAll -win $_nTrace1
+debReload

@@ -1,0 +1,2 @@
+Command Line: /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -sv -sv_pragma -f rtl_list.f -ssf test.fsdb -nologo
+uname(Linux rfic.eda 3.10.0-1127.el7.x86_64 #1 SMP Tue Feb 18 16:39:12 EST 2020 x86_64)

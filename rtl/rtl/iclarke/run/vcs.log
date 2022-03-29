@@ -1,0 +1,76 @@
+Command: vcs -sverilog -full64 -l vcs.log -notice -line -debug_acc+all -V +v2k +lint=TFIPC-L \
+-P /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -f \
+rtl_list.f
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/bin/vcs1 -Mcc=gcc -Mcplusplus=g++ \
+-Masflags= -Mcfl= -pipe -fPIC -O -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include \
+-Mxcflags= -pipe -fPIC -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include -Mldflags= \
+-rdynamic  -Mout=simv -Mamsrun="" -Mvcsaceobjs="" -Mobjects=" /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvirsim.so \
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/liberrorinf.so /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so \
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvfs.so /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a \
+" -Mexternalobj= -Msaverestoreobj=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o \
+-Mcrt0= -Mcrtn="" -Mcsrc="" -Msyslibs=-ldl -lm  -l vcs.log -full64 -Xnotice=1 -line \
+-debug_acc+all +vpi +vcsd1 +itf+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcsdp_lite.tab \
+-V +v2k +lint=TFIPC-L -P /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+-picarchive -sverilog -gen_obj -f rtl_list.f  
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Thu Feb 17 16:28:22 2022
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+################# <-file/-f contents> ########################
+-f rtl_list.f
+        ../rtl/bits_mul.v
+        ../rtl/32bits_mul.v
+        ../rtl/iclarke.v
+        ../rtl/tb_iclarke.v
+
+################# <-file/-f ends> ########################
+
+Parsing design file '../rtl/bits_mul.v'
+Parsing design file '../rtl/32bits_mul.v'
+Parsing design file '../rtl/iclarke.v'
+Parsing design file '../rtl/tb_iclarke.v'
+Top Level Modules:
+       mul_32bits
+       tb_iclarke
+No TimeScale specified
+
+Lint-[TFIPC-L] Too few instance port connections
+../rtl/tb_iclarke.v, 27
+tb_iclarke, "iclarke u_iclarke( .clk (clk),  .rst_n (rst_n),  .valp (valp),  .vbet (vbet));"
+  The above instance has fewer port connections than the module definition,
+  output port 'vr1' is not connected,
+  output port 'vr2' is not connected,
+  output port 'vr3' is not connected.
+
+Starting vcs inline pass...
+3 modules and 0 UDP read.
+Generating code for _VCSgd_reYIK
+Generating code for _VCSgd_BzZS6
+Generating code for _VCSgd_MvYE2
+recompiling module mul_32bits
+Generating code for _VCSgd_QbFbt
+recompiling module tb_iclarke
+Both modules done.
+	However, due to incremental compilation, only 2 modules need to be compiled. 
+( cd csrc ; make -f Makefile SNPS_VCS_TMPDIR=/tmp/vcs_20220217082822_107187 product \
+)
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ \
+-Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib \
+-L/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib   objs/amcQw_d.o   _107626_archive_1.so \
+_prev_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs \
+/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a    \
+-lvcsnew -lsimprofile -luclinative /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive        _vcs_pli_stub_.o   /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+CPU time: .236 seconds to compile + .260 seconds to elab + .229 seconds to link

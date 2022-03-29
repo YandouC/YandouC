@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib:/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/pylib27
+export LD_LIBRARY_PATH
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/bin/vcsfind_create_index.exe  -z  "/home/rfic/project/work/lpf_module/run/simv.daidir/debug_dump/fsearch/./idents_kp58kv.xml.gz" "/home/rfic/project/work/lpf_module/run/simv.daidir/debug_dump/fsearch/./idents_tapi.xml.gz" -o "/home/rfic/project/work/lpf_module/run/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/home/rfic/project/work/lpf_module/run/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/rfic/project/work/lpf_module/run/simv.daidir/debug_dump/fsearch/fsearch.db"

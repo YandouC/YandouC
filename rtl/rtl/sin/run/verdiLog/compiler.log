@@ -1,0 +1,14 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -sv_pragma
+    -f rtl_list.f
+        ../rtl/cordic_cell.v
+        ../rtl/cordic_pipelined.v
+        ../rtl/cordic_tb.v
+
+Highest level modules:
+cordic_tb
+
+Total	0 error(s),   0 warning(s)

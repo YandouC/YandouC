@@ -1,0 +1,81 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 341 212 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/rfic/project/work/pi_module/run/test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2417.703896
+cursor 1050.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 19
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname pi.pi_state
+nalias KI_ST		3'b010		NULL
+nalias UK_ST		3'b011		NULL
+nalias IDLE		3'b000		NULL
+nalias END		3'b100		NULL
+nalias KP_ST		3'b001		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/rfic/project/work/pi_module/run/test.fsdb"
+addSignal -h 15 /tb_pi/u_pi/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope pista
+addSignal -h 15 -holdScope uk_ex[31:0]
+addSignal -h 15 -holdScope kp[31:0]
+addSignal -h 15 -holdScope ek[31:0]
+addSignal -h 15 -holdScope ek_ex[31:0]
+addSignal -h 15 -holdScope ki[31:0]
+addSignal -h 15 -holdScope uk_min[31:0]
+addSignal -h 15 -holdScope uk_max[31:0]
+addSignal -h 15 -holdScope uk[31:0]
+addGroup "G2"
+addSignal -h 15 /tb_pi/u_pi/uk_reg[31:0]
+addSignal -h 15 -holdScope mul_res[63:0]
+addGroup "G3"
+aliasname pi.pi_state
+addSignal -h 15 -UNSIGNED -HEX /tb_pi/u_pi/pi_state[2:0]
+addGroup "G4"
+addSignal -h 15 /tb_pi/u_pi/count_b[31:0]
+addSignal -h 15 -holdScope count_a[31:0]
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

@@ -1,0 +1,18 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+wvCreateWindow
+wvOpenFile -win $_nWave2 {/home/rfic/project/work/div_32bits/run/test.fsdb}
+srcHBSelect "tb_mul_32bits" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_32bits" -delim "."
+srcHBSelect "tb_mul_32bits" -win $_nTrace1
+srcHBSelect "tb_mul_32bits.u_mul_32bits" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_32bits.u_mul_32bits" -delim "."
+srcHBSelect "tb_mul_32bits.u_mul_32bits" -win $_nTrace1
+srcHBSelect "tb_mul_32bits.u_mul_32bits" -win $_nTrace1
+srcHBSelect "divider" -win $_nTrace1
+srcSetScope -win $_nTrace1 "divider" -delim "."
+srcHBSelect "divider" -win $_nTrace1
+srcHBSelect "divider.inverse" -win $_nTrace1
+srcSetScope -win $_nTrace1 "divider.inverse" -delim "."
+srcHBSelect "divider.inverse" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+debExit

@@ -1,0 +1,5 @@
+#!/bin/csh -f
+verdi -sv -sv_pragma \
+      -f rtl_list.f \
+      -ssf test.fsdb \
+      -nologo \

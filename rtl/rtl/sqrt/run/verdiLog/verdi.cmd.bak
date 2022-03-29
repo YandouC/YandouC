@@ -1,0 +1,396 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+debLoadSimResult /home/rfic/project/work/sqrt/run/test.fsdb
+wvCreateWindow
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {2 5 3 1 3 1} -backward
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "data" -line 19 -pos 1 -win $_nTrace1
+srcHBSelect "tb_tssqrt.u_ts_sqrt.u_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt.u_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt.u_sqrt" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {5 8 14 1 5 1} -backward
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvUnknownSaveResult -win $_nWave2 -clear
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+wvSetPosition -win $_nWave2 {("G2" 0)}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_st_o" -line 8 -pos 1 -win $_nTrace1
+srcAction -pos 7 8 4 -win $_nTrace1 -name "sqrt_st_o" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_st" -line 62 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_st_t" -line 53 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 52 -pos 1 -win $_nTrace1
+srcSelect -signal "sqrt_st" -line 51 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+schCreateWindow -hierFSM -win $_nSchema1 -mode all
+wvZoom -win $_nWave2 6231.821996 13826.855054
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 52 -pos 1 -win $_nTrace1
+srcAction -pos 51 8 8 -win $_nTrace1 -name "sqrt_next_st" -ctrlKey off
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 5291.898431 13867.091508
+wvZoom -win $_nWave2 6491.226134 9794.828807
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt" -line 275 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 5578.111062 14314.911520
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_res" -line 393 -pos 1 -win $_nTrace1
+srcSelect -signal "sqrt_data_r0" -line 393 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoom -win $_nWave2 8930.087588 12095.997481
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvZoom -win $_nWave2 6279.490696 13267.436753
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "mul_res" -line 248 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 251 -pos 1 -win $_nTrace1
+wvZoom -win $_nWave2 7636.653773 9458.051029
+wvSetCursor -win $_nWave2 8846.672929 -snap {("G2" 2)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_3
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace4 -file /home/rfic/project/work/sqrt/rtl/sqrt.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+debReload
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 53214.939880 62121.205969
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 56189.124569 59524.902358
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+debReload
+verdiDockWidgetSetCurTab -dock widgetDock_<Message>
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 4834.057088 74693.978874
+wvZoom -win $_nWave2 6521.709362 59638.344109
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 48760.597949 62672.901519
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 55354.127709 58944.970207
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 56049.239941 -snap {("G2" 1)}
+srcActiveTrace "tb_tssqrt.u_ts_sqrt.u_sqrt.sqrt_st\[5:0\]" -win $_nTrace1 \
+           -TraceByDConWave -TraceTime 54450 -TraceValue 000010
+wvSetMarker -win $_nWave2 57650.000000
+srcHBSelect "tb_tssqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt" -delim "."
+srcHBSelect "tb_tssqrt" -win $_nTrace1
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace5 -file /home/rfic/project/work/sqrt/rtl/ts_sqrt.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 3214.180698 28635.428032
+wvZoom -win $_nWave2 6042.355067 13880.438321
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvExpandBus -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvScrollUp -win $_nWave2 3
+wvScrollUp -win $_nWave2 18
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvCollapseBus -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetCursor -win $_nWave2 11221.464391 -snap {("G1" 5)}
+srcActiveTrace "tb_tssqrt.u_ts_sqrt.u_sqrt.sqrt_o\[31:0\]" -win $_nTrace1 \
+           -TraceByDConWave -TraceTime 0 -TraceValue \
+           00000000000000000000000000000000
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o_t" -line 709 -pos 1 -win $_nTrace1
+srcAction -pos 708 6 1 -win $_nTrace1 -name "sqrt_o_t" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_t" -line 698 -pos 1 -win $_nTrace1
+srcAction -pos 697 5 4 -win $_nTrace1 -name "sqrt_t" -ctrlKey off
+wvZoom -win $_nWave2 6736.864945 12716.330872
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_t" -line 697 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 10581.893416 -snap {("G2" 4)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "cnt" -line 689 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 4)}
+wvSetCursor -win $_nWave2 11288.937703 -snap {("G2" 3)}
+wvSetCursor -win $_nWave2 10467.854015 -snap {("G2" 3)}
+wvSetCursor -win $_nWave2 9699.988715 -snap {("G2" 3)}
+wvSetCursor -win $_nWave2 9684.783462 -snap {("G2" 2)}
+wvSetCursor -win $_nWave2 10475.456642 -snap {("G2" 1)}
+srcActiveTrace "tb_tssqrt.u_ts_sqrt.u_sqrt.sqrt_st\[5:0\]" -win $_nTrace1 \
+           -TraceByDConWave -TraceTime 10450 -TraceValue 100001
+wvSetCursor -win $_nWave2 10429.840882 -snap {("G2" 1)}
+wvSetCursor -win $_nWave2 10429.840882 -snap {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_st" -line 438 -pos 1 -win $_nTrace1
+srcAction -pos 437 3 5 -win $_nTrace1 -name "sqrt_st" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 416 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 416 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 416 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 416 -pos 1 -win $_nTrace1
+srcAction -pos 415 5 6 -win $_nTrace1 -name "sqrt_next_st" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+debReload
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 12939.670704 -snap {("G1" 5)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 6447.027472 15691.821582
+wvSetCursor -win $_nWave2 12053.851109 -snap {("G2" 3)}
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 12932.488566 -snap {("G1" 5)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o" -line 6 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o" -line 6 -pos 1 -win $_nTrace1
+srcAction -pos 5 16 2 -win $_nTrace1 -name "sqrt_o" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o_t" -line 710 -pos 1 -win $_nTrace1
+srcAction -pos 709 6 3 -win $_nTrace1 -name "sqrt_o_t" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+debReload
+wvSetCursor -win $_nWave2 12066.429694 -snap {("G1" 5)}
+srcActiveTrace "tb_tssqrt.u_ts_sqrt.u_sqrt.sqrt_o\[31:0\]" -win $_nTrace1 \
+           -TraceByDConWave -TraceTime 0 -TraceValue \
+           00000000000000000000000000000000
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o_t" -line 710 -pos 1 -win $_nTrace1
+srcAction -pos 709 6 5 -win $_nTrace1 -name "sqrt_o_t" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_t" -line 699 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_o_t" -line 699 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 12878.710326 -snap {("G2" 8)}
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace4 -file /home/rfic/project/work/sqrt/rtl/sqrt.v
+srcSelect -all -win $_nTrace4
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 11230.604695 -snap {("G2" 7)}
+wvSetCursor -win $_nWave2 12878.710326 -snap {("G2" 8)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+srcDeselectAll -win $_nTrace1
+srcCloseWindow -win $_nTrace5
+srcCloseWindow -win $_nTrace4
+schCloseWindow -win $_nSchema3
+srcDeselectAll -win $_nTrace1
+debReload
+wvZoom -win $_nWave2 5980.269003 20248.154892
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 12451.438902 -snap {("G2" 5)}
+wvSelectSignal -win $_nWave2 {( "G2" 6 )} 
+srcHBSelect "tb_tssqrt" -win $_nTrace1
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace6 -file /home/rfic/project/work/sqrt/rtl/ts_sqrt.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 42417.474947 92182.858940
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvZoom -win $_nWave2 56506.138887 60801.907220
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvZoomOut -win $_nWave2
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt" -win $_nTrace1
+srcInvokeExtEditor -win $_nTrace1
+srcSaveAs -win $_nTrace6 -file /home/rfic/project/work/sqrt/rtl/ts_sqrt.v
+verdiDockWidgetSetCurTab -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+debReload
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvZoom -win $_nWave2 4022.372689 15687.253488
+wvZoom -win $_nWave2 5319.418689 13050.495502
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 11418.881998 13092.911798
+wvSetCursor -win $_nWave2 12156.091902 -snap {("G2" 1)}
+wvSetMarker -win $_nWave2 12350.000000
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 12100.984850 -snap {("G2" 5)}
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+srcHBSelect "tb_tssqrt.u_ts_sqrt.u_sqrt" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_tssqrt.u_ts_sqrt.u_sqrt" -delim "."
+srcHBSelect "tb_tssqrt.u_ts_sqrt.u_sqrt" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sqrt_next_st" -line 52 -pos 1 -win $_nTrace1
+srcAction -pos 51 8 6 -win $_nTrace1 -name "sqrt_next_st" -ctrlKey off

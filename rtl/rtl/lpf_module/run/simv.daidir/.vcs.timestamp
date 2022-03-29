@@ -1,0 +1,130 @@
+0 
+35
++itf+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcsdp_lite.tab
++lint=TFIPC-L
++v2k
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvirsim.so /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/liberrorinf.so /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvfs.so /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
+-Mout=simv
+-Msaverestoreobj=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/include
+-P
+-V
+-Xnotice=1
+-debug_acc+all
+-f rtl_list.f
+-full64
+-gen_obj
+-l
+-line
+-picarchive
+-sverilog
+/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/bin/vcs1
+/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab
+vcs.log
+75
+sysc_uni_pwd=/home/rfic/project/work/lpf_module/run
+XMODIFIERS=@im=ibus
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=1
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/rfic/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-rfic-Ubsbb3/database
+WINDOWPATH=1
+Virtuoso_HOME=/opt/Cdence/IC617
+Verdi_HOME=/opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2
+VTE_VERSION=5202
+VMR_MODE_FLAG=64
+VCS_MODE_FLAG=64
+VCS_LOG_FILE=vcs.log
+VCS_HOME=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+USERNAME=rfic
+UNAME=/bin/uname
+TOOL_HOME=/opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64
+Synopsys_Dir=/opt/Synopsys
+Syn_HOME=/opt/Synopsys/syn2018/syn/O-2018.06-SP1
+Starrc_HOME=/opt/Synopsys/Starrc2018/starrc/O-2018.06-SP1
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SSH_AGENT_PID=2655
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2526,unix/unix:/tmp/.ICE-unix/2526
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+SCL_HOME=/opt/Synopsys/SCL_2018/scl/2018.06
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PrimeTime_HOME=/opt/Synopsys/PrimeTime2018/pts/O-2018.06-SP1
+OVA_UUM=0
+OA_PLUGIN_PATH=/opt/Cdence/IC617/oa_v22.50.043/data/plugins
+OA_HOME=/opt/Cdence/IC617/oa_v22.50.043
+Mentor_Dir=/opt/Mentor
+MMSIM_HOME=/opt/Cdence/MMSIM151
+MGLS_LICENSE_FILE=/opt/Mentor/license/license.dat
+MGC_LIB_PATH=/opt/Mentor/calibre2018/aoi_cal_2018.4_34.26/lib
+MGC_HOME=/opt/Mentor/calibre2018/aoi_cal_2018.4_34.26
+MGC_FDI_OA_VERSION=22.50
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_HOME=/opt/Synopsys/LC2018/lc/O-2018.06-SP1
+LC_ALL=C
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ICC_HOME=/opt/Synopsys/ICC2018/icc/O-2018.06-SP1
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.108
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/a4193cea_4eaa_4c7f_83ba_13f07902d7d3
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
+Formality_HOME=/opt/Synopsys/Formality2018/fm/O-2018.06-SP1
+DESKTOP_SESSION=gnome-classic
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-i7fFwNmfoH,guid=b387621abd81fef7d66d356f620afb2b
+Cadence_Dir=/opt/Cdence
+COLORTERM=truecolor
+CDS_Netlisting_MODE=Analog
+CDS_LOAD_ENV=CSF
+CDS_LIC_FILE=/opt/Cdence/license/license.dat
+CDS_AUTO_64BIT=ALL
+CALIBRE_HOME=/opt/Mentor/calibre2018/aoi_cal_2018.4_34.26
+0
+7
+1644978784 ../rtl/tb_lpf.v
+1644979559 ../rtl/lpf.v
+1644973720 ../rtl/32bits_mul.v
+1644973720 ../rtl/bits_mul.v
+1644978911 rtl_list.f
+1550753332 /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab
+1551421246 /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/vcsdp_lite.tab
+5
+1551422344 /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvirsim.so
+1551421792 /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/liberrorinf.so
+1551421768 /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libsnpsmalloc.so
+1551421789 /opt/Synopsys/VCS2018/vcs/O-2018.09-SP2/linux64/lib/libvfs.so
+1550752033 /opt/Synopsys/Verdi2018/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a
+1644979572 simv.daidir
+-1 partitionlib

@@ -1,0 +1,16 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -sv_pragma
+    -f rtl_list.f
+        ../rtl/32bits_mul.v
+        ../rtl/bits_mul.v
+        ../rtl/tb_tssqrt.v
+        ../rtl/sqrt.v
+        ../rtl/ts_sqrt.v
+
+Highest level modules:
+tb_tssqrt
+
+Total	0 error(s),   0 warning(s)

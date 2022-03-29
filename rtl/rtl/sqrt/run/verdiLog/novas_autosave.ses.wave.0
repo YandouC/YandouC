@@ -1,0 +1,107 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 392 216 105
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/rfic/project/work/sqrt/run/test.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 237.830519 18312.949990
+cursor 7250.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 5
+; marker line index
+markerPos 16
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname sqrt.sqrt_st
+nalias ST_2B		6'b000010		NULL
+nalias ST_8B		6'b001000		NULL
+nalias ST_32B		6'b100000		NULL
+nalias ST_3B		6'b000011		NULL
+nalias ST_6B		6'b000110		NULL
+nalias ST_9B		6'b001001		NULL
+nalias ST_12B		6'b001100		NULL
+nalias ST_18B		6'b010010		NULL
+nalias ST_24B		6'b011000		NULL
+nalias SQRT_END		6'b100001		NULL
+nalias ST_7B		6'b000111		NULL
+nalias ST_13B		6'b001101		NULL
+nalias ST_19B		6'b010011		NULL
+nalias ST_22B		6'b010110		NULL
+nalias ST_25B		6'b011001		NULL
+nalias ST_28B		6'b011100		NULL
+nalias ST_23B		6'b010111		NULL
+nalias ST_29B		6'b011101		NULL
+nalias IDLE		6'b000000		NULL
+nalias ST_1B		6'b000001		NULL
+nalias ST_4B		6'b000100		NULL
+nalias ST_16B		6'b010000		NULL
+nalias ST_5B		6'b000101		NULL
+nalias ST_10B		6'b001010		NULL
+nalias ST_17B		6'b010001		NULL
+nalias ST_20B		6'b010100		NULL
+nalias ST_11B		6'b001011		NULL
+nalias ST_14B		6'b001110		NULL
+nalias ST_21B		6'b010101		NULL
+nalias ST_26B		6'b011010		NULL
+nalias ST_15B		6'b001111		NULL
+nalias ST_27B		6'b011011		NULL
+nalias ST_30B		6'b011110		NULL
+nalias ST_31B		6'b011111		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/rfic/project/work/sqrt/run/test.fsdb"
+addSignal -h 15 /tb_tssqrt/u_ts_sqrt/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -holdScope touch
+addGroup "G2"
+addSignal -h 15 /tb_tssqrt/u_ts_sqrt/clk_o
+addSignal -h 15 -holdScope rst_n_o
+addSignal -h 15 -holdScope touch_o
+addSignal -h 15 -holdScope sqrt_st[5:0]
+aliasname sqrt.sqrt_st
+addSignal -h 15 -UNSIGNED -HEX /tb_tssqrt/u_ts_sqrt/u_sqrt/sqrt_next_st[5:0]
+addSignal -h 15 /tb_tssqrt/u_ts_sqrt/sqrt_t_wd[5:0]
+addGroup "G3"
+addSignal -h 15 /tb_tssqrt/u_ts_sqrt/u_sqrt/sqrt_en_r
+addSignal -h 15 -holdScope sqrt_data_r1[63:0]
+addSignal -h 15 -holdScope sqrt_data_r0[63:0]
+addSignal -h 15 -holdScope sqrt_en
+addSignal -h 15 -holdScope sqrt_o[31:0]
+addGroup "G4"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

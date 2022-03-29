@@ -1,0 +1,6 @@
+debImport "-sv" "-sv_pragma" "-f" "rtl_list.f"
+debLoadSimResult /home/rfic/project/work/32bits_mul/run/test.fsdb
+wvCreateWindow
+srcHBSelect "tb_mul_32bits.u_mul_32bits" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_mul_32bits.u_mul_32bits" -delim "."
+srcHBSelect "tb_mul_32bits.u_mul_32bits" -win $_nTrace1
